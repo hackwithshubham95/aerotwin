@@ -1,0 +1,78 @@
+{
+  "model_version": "4.0.0-MoE-7Experts-GPU",
+  "timestamp": "2026-09-29T20:32:34Z",
+  "hardware": "NVIDIA GeForce RTX 5050 (CUDA Hist)",
+  "feature_columns": [
+    "rpm",
+    "power_output_kw",
+    "torque_nm",
+    "manifold_pressure_hpa",
+    "throttle_pct",
+    "combustion_efficiency_pct",
+    "cht_max",
+    "egt_max",
+    "res_cht_spread",
+    "res_egt_spread",
+    "vibration_g",
+    "lambda_afr",
+    "oil_temperature_c",
+    "oil_pressure_bar",
+    "coolant_temperature_c",
+    "fuel_flow_lph",
+    "engine_hours_used",
+    "res_map_residual",
+    "res_oil_press_residual",
+    "altitude_m",
+    "ambient_temp_c",
+    "fuel_pressure_bar",
+    "bus_voltage_v",
+    "turbo_rpm",
+    "injection_pulse_width_ms",
+    "ignition_timing_btdc",
+    "injection_timing_btdc"
+  ],
+  "experts": {
+    "E1_performance": {
+      "r2_score": 1.0,
+      "rmse": 0.0,
+      "dataset": "nasa_cmapss + lycoming_real"
+    },
+    "E2_fault": {
+      "accuracy": 0.813,
+      "f1_score": 0.8118
+    },
+    "E3_health": {
+      "status": "trained",
+      "rows": 800000
+    },
+    "E4_rul": {
+      "r2_score": 0.9762,
+      "rmse_hours": 29.48,
+      "rows": 800000,
+      "dataset": "nasa_cmapss_real + femto_real"
+    },
+    "E5_operating": {
+      "status": "trained",
+      "rows": 800000
+    },
+    "E6_cross_engine": {
+      "status": "trained",
+      "rows": 800000
+    },
+    "E7_physics": {
+      "status": "trained",
+      "rows": 265951
+    }
+  },
+  "fault_classes": [
+    "Nominal",
+    "Cylinder_Misfire",
+    "Turbo_Degradation",
+    "Combustion_Knock",
+    "Valve_Leakage",
+    "Oil_Starvation",
+    "Coolant_Loss",
+    "Injector_Clogging",
+    "Sensor_Drift"
+  ]
+}

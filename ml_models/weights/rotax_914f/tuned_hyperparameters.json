@@ -1,0 +1,62 @@
+{
+  "engine_id": "ROTAX_914F",
+  "engine_name": "Rotax 914F3 Turbo Boxer",
+  "tuning_date": "2026-09-30T17:27:48Z",
+  "hardware": "NVIDIA GeForce RTX 5050 (CUDA Hist)",
+  "cv_folds": 3,
+  "samples_evaluated": 100000,
+  "fault_classifier": {
+    "best_accuracy": 0.9999799997999981,
+    "optimal_hyperparameters": {
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 150,
+      "subsample": 0.85,
+      "colsample_bytree": 0.9
+    },
+    "feature_attributions": {
+      "rpm": 0.010572112165391445,
+      "manifold_pressure_hpa": 0.002437925897538662,
+      "power_output_kw": 0.0014711482217535377,
+      "torque_nm": 0.0013504865346476436,
+      "fuel_flow_lph": 0.0015872723888605833,
+      "fuel_pressure_bar": 4.955431359121576e-05,
+      "cht_cyl_1": 0.0051185195334255695,
+      "cht_cyl_2": 0.046818628907203674,
+      "cht_cyl_3": 0.03337891027331352,
+      "cht_cyl_4": 0.015982922166585922,
+      "egt_cyl_1": 0.03901975229382515,
+      "egt_cyl_2": 0.05360758304595947,
+      "egt_cyl_3": 0.09641271084547043,
+      "egt_cyl_4": 0.008898794651031494,
+      "oil_temperature_c": 0.0014302644412964582,
+      "oil_pressure_bar": 0.16143763065338135,
+      "coolant_temperature_c": 0.041184693574905396,
+      "turbo_rpm": 0.0028621878009289503,
+      "vibration_g": 0.018220866098999977,
+      "bus_voltage_v": 4.402966806082986e-05,
+      "altitude_m": 1.2173805771453772e-05,
+      "ambient_temp_c": 4.1140770917991176e-05,
+      "throttle_pct": 3.256649506511167e-05,
+      "ignition_timing_btdc": 0.13185563683509827,
+      "injection_timing_btdc": 2.9449674912029877e-05,
+      "injection_pulse_width_ms": 0.0013498570770025253,
+      "lambda_afr": 0.07495856285095215,
+      "combustion_efficiency_pct": 0.022280389443039894,
+      "res_cht_spread": 0.039411190897226334,
+      "res_egt_spread": 0.02434471808373928,
+      "res_map_residual": 0.14180059731006622,
+      "res_oil_press_residual": 0.021997708827257156
+    }
+  },
+  "rul_regressor": {
+    "best_r2_score": 0.9975092438600517,
+    "best_rmse_hours": 11.183072544233317,
+    "optimal_hyperparameters": {
+      "max_depth": 8,
+      "learning_rate": 0.04,
+      "n_estimators": 300,
+      "subsample": 0.9
+    }
+  }
+}
